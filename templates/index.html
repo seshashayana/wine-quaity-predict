@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Wine Quality Prediction API</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<h1>Predict Wine Quality</h1>
+   {{ prediction_text }}
+ <div class="jumbotron form-group inline">
+     <!-- Main Input For Receiving Query to our ML -->
+    <form class="form-group" action="{{ url_for('predict')}}" method="post">
+      <label for="fixedacidity">Fixed Acidity (4 ~ 16):</label>
+    	<input class="form-control-plaintext" type="text" name="fixedacidity" placeholder="Fixed Acidity" required="required" />
+      <br>
+      <label for="volatileacidity">Volatile Acidity (0 ~ 2):</label>
+      <input class="form-control-plaintext" type="text" name="volatileacidity" placeholder="Volatile Acidity" required="required" />
+      <br>
+      <label for="citricacidity">Citric Acidity (0 ~ 1):</label>
+  		<input class="form-control-plaintext" type="text" name="citricacidity" placeholder="Citric Acidity" required="required" />
+      <br>
+      <label for="residualsugar">Residual Sugar (0 ~ 16):</label>
+      <input class="form-control-plaintext" type="text" name="residualsugar" placeholder="Residual Sugar" required="required" />
+      <br>
+      <label for="chlorides">Chlorides (0 ~ 1):</label>
+      <input class="form-control-plaintext" type="text" name="chlorides" placeholder="Chlorides" required="required" />
+      <br>
+      <label for="freeso2">Free SO2 (1 ~ 100):</label>
+      <input class="form-control-plaintext" type="text" name="freeso2" placeholder="Free SO2" required="required" />
+      <br>
+      <label for="totalso2">Total SO2 (1 ~ 300):</label>
+      <input class="form-control-plaintext" type="text" name="totalso2" placeholder="Total SO2" required="required" />
+      <br>
+      <label for="density">Density (~~ 1):</label>
+      <input class="form-control-plaintext" type="text" name="density" placeholder="Density" required="required" />
+      <br>
+      <label for="ph">pH Value (2 ~ 4.5):</label>
+      <input class="form-control-plaintext" type="text" name="ph" placeholder="pH Value" required="required" />
+      <br>
+      <label for="sulphate">Sulphate (0 ~ 2):</label>
+      <input class="form-control-plaintext" type="text" name="sulphate" placeholder="Sulphate" required="required" />
+      <br>
+      <label for="alcohol">Alcohol (8 ~ 15):</label>
+      <input class="form-control-plaintext" type="text" name="alcohol" placeholder="Alcohol" required="required" />
+      <br>
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+
+
+</body>
+</html>
