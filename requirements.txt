@@ -3,17 +3,17 @@ click==7.1.2
 Flask==1.1.2
 itsdangerous==1.1.0
 Jinja2==2.11.2
-joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
+joblib==0.16.1
 MarkupSafe==1.1.1
 mkl-fft==1.1.0
 mkl-random==1.1.1
 mkl-service==2.3.0
-numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1596233721170/work
-pandas @ file:///tmp/build/80754af9/pandas_1596825826607/work
+numpy==1.19.1
+pandas==1.1.0
 python-dateutil==2.8.1
 pytz==2020.1
-scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1592502866053/work
-scipy @ file:///tmp/build/80754af9/scipy_1592930511789/work
+scikit-learn==0.23.1
+scipy==1.5.0
 six==1.15.0
-threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+threadpoolctl==2.1.0
 Werkzeug==1.0.1
